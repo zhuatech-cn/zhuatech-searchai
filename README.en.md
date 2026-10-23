@@ -1,5 +1,11 @@
 [简体中文](README.md) | **English**
 
+## 2026-10-23 update: Explainable BM25 candidate ranking
+
+Ranks caller-authorized tokenized candidate documents using BM25 with explicit length normalization, matched terms and deterministic ties; it is not a permission filter or tokenizer.
+
+After signing in to the real backend, open the bottom-right business calculation tool to submit structured input, inspect calculated results and export complete JSON. The endpoint is `POST /api/workbench/candidate-bm25-ranking` with the existing JWT. Computation is implemented server-side; it does not query another user's records, persist business documents, approve transactions or invoke external models. See [algorithm, sample and test notes](docs/AI_WORKFLOW_UPGRADE_20261023.md).
+
 # ZhuaTech SearchAI
 
 > A source-available enterprise project by [ZhuaTech](https://www.zhuatech.cn/) for enterprise data, knowledge, search, analytics, and AI operations.
