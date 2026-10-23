@@ -1,0 +1,62 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "eligibleHits": "#35"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "sourceGroups": "2"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "targetHits": "40"
+    },
+    "expected": {
+      "decision": "REVIEW",
+      "hitGap": "#5"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "duplicates": "41"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "sourceGroups": "36"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "staleUnique": "45",
+      "sourceGroups": "0"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "targetHits": "35"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  }
+]

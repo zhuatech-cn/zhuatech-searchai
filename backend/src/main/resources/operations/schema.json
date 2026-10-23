@@ -1,0 +1,93 @@
+{
+  "slug": "searchai",
+  "title": "检索新鲜度与来源覆盖缺口",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "authorizedHits",
+      "label": "已授权候选数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "duplicates",
+      "label": "其中重复条目",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "staleUnique",
+      "label": "去重后过期条目",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "sourceGroups",
+      "label": "有效候选独立来源数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "minimumSources",
+      "label": "最低来源数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "1",
+      "max": "1000000"
+    },
+    {
+      "key": "targetHits",
+      "label": "目标返回条数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "1",
+      "max": "1000000"
+    }
+  ],
+  "columns": [
+    {
+      "key": "eligibleHits",
+      "label": "有效候选"
+    },
+    {
+      "key": "returnableHits",
+      "label": "可返回条数"
+    },
+    {
+      "key": "hitGap",
+      "label": "条数缺口"
+    }
+  ],
+  "description": "从已通过真实权限过滤的候选中扣除重复和过期条目，核对可返回结果数及独立来源覆盖，不执行检索或替代ACL。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-24",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "authorizedHits": "50",
+        "duplicates": "5",
+        "staleUnique": "10",
+        "sourceGroups": "4",
+        "minimumSources": "3",
+        "targetHits": "20"
+      }
+    ]
+  }
+}
